@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>migration-safety</AssemblyName>
+    <RootNamespace>MigrationSafetyAnalyzer.Cli</RootNamespace>
+    <PackageId>ulsyairil.MigrationSafetyAnalyzer.Cli</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>ulsyairil</Authors>
+    <Description>Command line static safety analyzer for Entity Framework Core migrations. Provider-aware lock, table-rewrite and data-loss modeling for PostgreSQL, SQL Server, SQLite and MySQL.</Description>
+    <PackageTags>efcore;migrations;safety;analyzer;dotnet-tool;cli;postgres</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>migration-safety</ToolCommandName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.15" />
+    <ProjectReference Include="../MigrationSafetyAnalyzer.Core/MigrationSafetyAnalyzer.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

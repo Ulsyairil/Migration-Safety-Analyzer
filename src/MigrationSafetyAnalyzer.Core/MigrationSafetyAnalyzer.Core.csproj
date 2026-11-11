@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <RootNamespace>MigrationSafetyAnalyzer.Core</RootNamespace>
+    <AssemblyName>MigrationSafetyAnalyzer.Core</AssemblyName>
+    <PackageId>ulsyairil.MigrationSafetyAnalyzer.Core</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>ulsyairil</Authors>
+    <Description>Static safety analyzer for Entity Framework Core migrations. Provider-aware lock, table-rewrite and data-loss modeling for PostgreSQL, SQL Server, SQLite and MySQL. Zero EF Core dependency.</Description>
+    <PackageTags>efcore;migrations;safety;analyzer;postgres;sqlserver;sqlite;mysql;dotnet</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
